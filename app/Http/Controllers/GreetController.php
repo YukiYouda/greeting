@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 
 class GreetController extends Controller
 {
-    public function greet ($time) {
+    public function greet($time)
+    {
         $array = ['おはようございます', 'こんにちは', 'こんばんは', 'おやすみ'];
         if ($time === 'morning') {
             $title = '朝のあいさつ';
@@ -22,7 +23,7 @@ class GreetController extends Controller
             $greet = 'おやすみ';
         } elseif ($time === 'random') {
             $title = 'ランダムなメッセージ';
-            $greet = $array[ array_rand( $array ) ];
+            $greet = $array[array_rand($array)];
         }
 
         return view('greet', [
