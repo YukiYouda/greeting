@@ -30,4 +30,9 @@ class GreetController extends Controller
             'greet' => $greet, 
             'title' => $title]);
     }
+
+    public function word($word)
+    {
+        return view('word', ['word' => $word]);
+    }
 }
