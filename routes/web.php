@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function() {
+    return '<h1>Hello from route</h1>';
 });
 
 Route::get('comments/{time}', [App\Http\Controllers\GreetController::class, 'greet']);
